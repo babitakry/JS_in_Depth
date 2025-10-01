@@ -16,5 +16,5 @@ let x = {
 
 let a = [10, 20, 30];
 
-console.log(typeof(x), typeof(a));
-console.log(Array.isArray(x), Array.isArray(a));
+// console.log(typeof(x), typeof(a));
+// console.log(Array.isArray(x), Array.isArray(a));
