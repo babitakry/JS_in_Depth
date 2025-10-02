@@ -106,3 +106,71 @@ let obj3 = {name: "Arun", age: 25};
 // console.log(NaN == false); // false
 // console.log(null == false); // false
 // console.log(undefined == false); // false
+
+
+// ---------------- Logical Operator ----------
+let s1 = 'mysirg';
+let s2 = !s1;
+// console.log(s1, s2); // mysirg false
+
+s1 = undefined;
+s2 = !s1;
+// console.log(s1, s2); // undefined true
+
+s1 = NaN;
+s2 = !s1;
+// console.log(s1, s2); // NaN true
+
+s1 = null;
+s2 = !s1;
+// console.log(s1, s2); // null true
+
+// let n1 = 5;
+// let n2 = 6;
+// let c = n1>0 && ++n2;
+// // console.log(c, n2); // 7 7
+
+let n1 = 5;
+let n2 = 6;
+let c = n1<0 && ++n2;
+console.log(c, n2); // false 6
+
+// AND (&&) and OR (||) examples in JavaScript
+
+let temp = 0 && 5;
+console.log(temp); // 0
+
+temp = 2 && 5;
+console.log(temp); // 5
+
+temp = 5 || null;
+console.log(temp); // 5
+
+temp = null || 5;
+console.log(temp); // 5
+
+temp = null || undefined;
+console.log(temp); // undefined
+
+temp = 1 && 42;
+console.log(temp); // 42
+
+temp = false || 'Hello';
+console.log(temp); // "Hello"
+
+temp = (true && false) || 'true';
+console.log(temp); // "true"
+
+temp = (5 && null) || 'true';
+console.log(temp); // "true"
+
+temp = 5 && null || 10;
+console.log(temp); // 10
+
+temp = 1 && null;
+console.log(temp); // null
+
+// ---------converting non-boolean to boolean------------
+// let b = 10;
+// b = !!b;
+// console.log(b);
