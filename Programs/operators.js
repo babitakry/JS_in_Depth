@@ -133,44 +133,114 @@ s2 = !s1;
 let n1 = 5;
 let n2 = 6;
 let c = n1<0 && ++n2;
-console.log(c, n2); // false 6
+// console.log(c, n2); // false 6
 
 // AND (&&) and OR (||) examples in JavaScript
 
 let temp = 0 && 5;
-console.log(temp); // 0
+// console.log(temp); // 0
 
 temp = 2 && 5;
-console.log(temp); // 5
+// console.log(temp); // 5
 
 temp = 5 || null;
-console.log(temp); // 5
+// console.log(temp); // 5
 
 temp = null || 5;
-console.log(temp); // 5
+// console.log(temp); // 5
 
 temp = null || undefined;
-console.log(temp); // undefined
+// console.log(temp); // undefined
 
 temp = 1 && 42;
-console.log(temp); // 42
+// console.log(temp); // 42
 
 temp = false || 'Hello';
-console.log(temp); // "Hello"
+// console.log(temp); // "Hello"
 
 temp = (true && false) || 'true';
-console.log(temp); // "true"
+// console.log(temp); // "true"
 
 temp = (5 && null) || 'true';
-console.log(temp); // "true"
+// console.log(temp); // "true"
 
 temp = 5 && null || 10;
-console.log(temp); // 10
+// console.log(temp); // 10
 
 temp = 1 && null;
-console.log(temp); // null
+// console.log(temp); // null
 
 // ---------converting non-boolean to boolean------------
 // let b = 10;
 // b = !!b;
 // console.log(b);
+
+
+
+// ------------ bitwise operator -----------------
+// ---------- n << 1 == n * 2^1 ---------
+// ---------- n << 2 == n * 2^2 ---------
+// ---------- n << 3 == n * 2^3 ---------
+// ---------- n << 4 == n * 2^4 ---------
+
+let x1 = 10 << 1; // 20
+let x2 = 10 << 2; // 40
+let x3 = 10 << 3; // 80
+let x4 = 10 << 4; // 160
+
+// --------- n >> 1 == n / 2^1 -----------
+// --------- n >> 2 == n / 2^2 -----------
+// --------- n >> 3 == n / 2^3 -----------
+let x5 = 10 >> 1; // 5
+let x6 = 10 >> 2; // 2
+let x7 = 10 >> 3; // 1
+let x8 = 10 >> 4; // 0
+
+let m1 = -10 >> 1; // -5
+let m2 = -10 >> 2; // -3
+let m3 = -10 >> 3; // -2
+let m4 = -10 >> 4; // -1
+
+let m5 = -4 >> 1; // -2
+let m6 = -4 >> 2; // -1
+let m7 = -4 >> 3; // -1
+let m8 = -4 >> 4; // -1
+let m9 = -4 >> 5; // -1
+// --------- >>> == sign bit also participate in shifting-------
+let m10 = -4 >>> 1; // 2147483646 
+// console.log(m10);
+
+let z1 = 25;
+// console.log(z1.toString()); // 25
+// console.log(z1.toString(2)); // 11001
+// console.log(z1.toString(8)); // 31
+// console.log(z1.toString(16)); // 19
+// console.log(z1.toString(10)); // 25
+
+// to check even odd
+let z2;
+// console.time('arithmetic');
+// for(let i = 1; i <= 10000; i++){
+//     z2 = z1 % 2;
+// }
+// console.timeEnd('arithmetic');
+
+// let z3;
+// console.time('bitwise');
+// for(let i = 1; i <= 10000; i++){
+//     z3 = z1 & 1;
+// }
+// console.timeEnd('bitwise');
+
+
+
+
+let t1 = -3.5;
+let t2 = Math.floor(t1);
+let t3 = Math.trunc(t1); // 3
+let t4 = ~~t1; // 3 ------ work same as trunc() with execellent performance
+// console.log(t2, t3, t4);
+
+let t5 = NaN; //t5 = null || t5 = NaN || t5 = undefined
+let t6 = ~~t5;
+console.log(t6);
