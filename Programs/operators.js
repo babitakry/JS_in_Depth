@@ -1,15 +1,15 @@
 let a;
-a = 3/4; // 0.75
+a = 3 / 4; // 0.75
 // console.log(Math.floor(a)); // 0
 
-a = 10%4; //2
-a = 10%5; //0
+a = 10 % 4; //2
+a = 10 % 5; //0
 
 let x;
-x = 7%5; //2
-x = (-7)%5; //-2
-x = (7)%-5; //2
-x = (-7)%(-5); //-2
+x = 7 % 5; //2
+x = (-7) % 5; //-2
+x = (7) % -5; //2
+x = (-7) % (-5); //-2
 
 
 // #NOTE: According to numerator sign result sign decided
@@ -21,11 +21,11 @@ last_two_digit = y % 100; //13
 
 
 let z;
-z = 2**3; //8
-z = 2**(-3); //0.125
+z = 2 ** 3; //8
+z = 2 ** (-3); //0.125
 // z = -2**2; // Error
-z = (-2)**2; //4
-z = -(2**2); //-4
+z = (-2) ** 2; //4
+z = -(2 ** 2); //-4
 // console.log(z);
 
 let p = 5;
@@ -68,10 +68,10 @@ s = 4 == '4';
 s = 4 === '4';
 // console.log(s); // false
 
-s = 4*'5';
+s = 4 * '5';
 // console.log(s); // 20
 
-s = 4*'5a';
+s = 4 * '5a';
 // console.log(s); // NaN
 
 s = 4 != '4';
@@ -81,12 +81,12 @@ s = 4 !== '4';
 // console.log(s); // true
 
 
-let obj1 = {name: "Arun", age: 25};
+let obj1 = { name: "Arun", age: 25 };
 let obj2 = obj1;
 // console.log(obj1 == obj2); // true
 // console.log(obj1 === obj2); // true
 
-let obj3 = {name: "Arun", age: 25};
+let obj3 = { name: "Arun", age: 25 };
 // console.log(obj1 == obj3); // false
 // console.log(obj1 === obj3); // false
 
@@ -132,7 +132,7 @@ s2 = !s1;
 
 let n1 = 5;
 let n2 = 6;
-let c = n1<0 && ++n2;
+let c = n1 < 0 && ++n2;
 // console.log(c, n2); // false 6
 
 // AND (&&) and OR (||) examples in JavaScript
@@ -206,6 +206,12 @@ let m6 = -4 >> 2; // -1
 let m7 = -4 >> 3; // -1
 let m8 = -4 >> 4; // -1
 let m9 = -4 >> 5; // -1
+
+let m11 = -4 >> 31; // -1
+let m12 = -4 >> 32; // 0
+console.log(m12); // -4
+
+
 // --------- >>> == sign bit also participate in shifting-------
 let m10 = -4 >>> 1; // 2147483646 
 // console.log(m10);
@@ -243,4 +249,6 @@ let t4 = ~~t1; // 3 ------ work same as trunc() with execellent performance
 
 let t5 = NaN; //t5 = null || t5 = NaN || t5 = undefined
 let t6 = ~~t5;
-console.log(t6);
+// console.log(t6);
+
+
