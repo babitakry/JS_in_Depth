@@ -1,5 +1,9 @@
 // document.write("MySirG");
-console.log("Hii");
+// console.log("Hii");
 
-var a = 5;
-let b = 7;
+var f1 = function(){
+    console.log(x);
+    var x = 5;
+}
+
+f1();
