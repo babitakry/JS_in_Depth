@@ -179,3 +179,22 @@ const nObj = new normalFunc(1, "normal function");
 //     console.log(this);
 // }
 // const aObj = new arrowFunc(2, "arrow function"); //TypeError: arrowFunc is not a constructor
+
+
+// ---------------- Argument Object ---------------------
+// 
+// 
+// 
+// function f4(){
+//     console.log(arguments);
+// }
+// f4(3, 4); // [Arguments] { '0': 3, '1': 4 }
+
+const f4 = () => {
+    console.log(arguments);
+}
+f4(3, 5);
+//[Arguments] {
+//   '0': {},
+//   '1': [Function: require] {
+//     resolve: [Function: resolve] { paths: [Function: paths] }, .....
