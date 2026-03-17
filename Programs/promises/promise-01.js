@@ -24,15 +24,16 @@ function someAPI() {
 
     return p1;
 }
-// console.log(p1);
+
 
 // Consumer Code
 let p1 = someAPI();
+console.log(p1);
 p1.then((result) => {
     console.log("Promise Fulfilled "+result);
 }, (error) => {
     console.log("Promise Rejected "+error);
-});
+})
 
 // when reject only then it runs
 p1.catch(() => {
